@@ -1,0 +1,144 @@
+.mdash_center_container {
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  overflow: hidden;
+  width: 100vw;
+  flex-direction: column;
+}
+
+.mdash_center_title {
+  color: white;
+  margin: 10px;
+  border-bottom: 2px solid blue;
+  padding: 5px;
+  width: 10%;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mdash_center_wrapper {
+  margin: 5px 0px;
+  height: 40vh;
+  display: flex;
+
+  animation: slide 10s infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0vw);
+  }
+  20% {
+    transform: translateX(-20vw);
+  }
+  40% {
+    transform: translateX(-40vw);
+  }
+  60% {
+    transform: translateX(-60vw);
+  }
+  80% {
+    transform: translateX(-80vw);
+  }
+  100% {
+    transform: translateX(-100vw);
+  }
+}
+
+.mdash_center_card {
+  border: 1px solid blue;
+  width: 100%;
+  height: 100%;
+  margin: 0px 5px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mdash_center_img {
+  width: 238px;
+  height: 230px;
+  object-fit: cover;
+}
+
+.mdash_center_logoes {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  display: none;
+}
+
+.mdash_center_logo {
+  margin: 10px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 50%;
+  opacity: 0.5;
+  transition: all 1s ease;
+  cursor: pointer;
+}
+
+.mdash_center_logo:hover {
+  transform: scale(1.2);
+}
+
+.mdash_center_logoes:hover,
+.mdash_center_img:hover + .mdash_center_logoes {
+  display: flex;
+}
+
+@media (max-width: 760px) {
+  .mdash_center_container {
+    height: 100%;
+  }
+
+  .mdash_center_wrapper {
+    height: 25vh;
+  }
+
+  @keyframes slide {
+    0% {
+      transform: translateX(0vw);
+    }
+    10% {
+      transform: translateX(-100vw);
+    }
+    20% {
+      transform: translateX(-150vw);
+    }
+    30% {
+      transform: translateX(-200vw);
+    }
+    40% {
+      transform: translateX(-250vw);
+    }
+    50% {
+      transform: translateX(-300vw);
+    }
+    60% {
+      transform: translateX(-350vw);
+    }
+    70% {
+      transform: translateX(-390vw);
+    }
+    80% {
+      transform: translateX(-350vw);
+    }
+    90% {
+      transform: translateX(-300vw);
+    }
+    100% {
+      transform: translateX(0vw);
+    }
+  }
+
+  .mdash_center_img {
+    width: 180px;
+    height: 200px;
+    object-fit: cover;
+  }
+}
